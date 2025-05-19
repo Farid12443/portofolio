@@ -1,0 +1,1992 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Farid</title>
+
+        <!-- tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- font awesome-->
+        <script
+            src="https://kit.fontawesome.com/1df42cf205.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- library -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+        <!-- config -->
+        <script src="js/tailwind-config.js"></script>
+
+        <!-- style -->
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body class="min-h-screen font-JetBrains Mono bg-dark-900">
+        <!-- navbar-->
+        <header class="fixed w-full top-0 left-0 bg-slate-800 shadow-md z-50">
+            <nav
+                class="container mx-auto px-6 h-14 md:h-20 flex items-center justify-between relative"
+            >
+                <a href="#" class="text-white font-semibold text-xl"
+                    >Muhammad <span class="text-gradient">Farid</span>.</a
+                >
+
+                <div
+                    id="nav-menu"
+                    class="fixed md:static left-[-100%] md:left-auto top-0 w-full md:w-auto h-full md:h-auto bg-slate-800 md:bg-transparent px-10 md:px-0 py-24 md:py-0 flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-8 transition-all duration-300 z-40"
+                >
+                    <ul
+                        class="flex flex-col md:flex-row gap-10 md:gap-8 nav__list"
+                    >
+                        <li class="nav__item md:transform-none md:visible">
+                            <a
+                                href="#"
+                                class="nav__link relative text-lg md:text-sm font-medium inline-flex items-center transition-opacity duration-400"
+                            >
+                                <i
+                                    class="fa-solid fa-house absolute left-0 text-2xl md:text-lg"
+                                ></i>
+                                <span class="relative ml-0 transition-all"
+                                    >Home</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav__item md:transform-none md:visible">
+                            <a
+                                href="#about"
+                                class="nav__link relative text-lg md:text-sm font-medium inline-flex items-center transition-opacity duration-400"
+                            >
+                                <i
+                                    class="fa-solid fa-user absolute left-0 text-2xl md:text-lg"
+                                ></i>
+                                <span class="relative ml-0 transition-all"
+                                    >About Us</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav__item md:transform-none md:visible">
+                            <a
+                                href="#service"
+                                class="nav__link relative text-lg md:text-sm font-medium inline-flex items-center transition-opacity duration-400"
+                            >
+                                <i
+                                    class="fa-solid fa-briefcase absolute left-0 text-2xl md:text-lg"
+                                ></i>
+                                <span class="relative ml-0 transition-all"
+                                    >Services</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav__item md:transform-none md:visible">
+                            <a
+                                href="#portfolio"
+                                class="nav__link relative text-lg md:text-sm font-medium inline-flex items-center transition-opacity duration-400"
+                            >
+                                <i
+                                    class="fa-solid fa-laptop-code absolute left-0 text-2xl md:text-lg"
+                                ></i>
+                                <span class="relative ml-0 transition-all"
+                                    >Portfolio</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav__item md:transform-none md:visible">
+                            <a
+                                href="#contact"
+                                class="nav__link relative text-lg md:text-sm font-medium inline-flex items-center transition-opacity duration-400"
+                            >
+                                <i
+                                    class="fa-solid fa-phone absolute left-0 text-2xl md:text-lg"
+                                ></i>
+                                <span class="relative ml-0 transition-all"
+                                    >Contact</span
+                                >
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div
+                        id="nav-close"
+                        class="absolute top-5 right-6 text-2xl text-white cursor-pointer md:hidden"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="flex gap-4 mt-8 md:mt-0">
+                        <a
+                            href="https://www.instagram.com/thisridzzz?igsh=ZG56djN2YWFidDNx"
+                            class="text-xl hover:-translate-y-1 transition-transform"
+                            ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                        <a
+                            href="https://github.com/Farid12443"
+                            class="text-xl hover:-translate-y-1 transition-transform"
+                            ><i class="fa-brands fa-github"></i
+                        ></a>
+                        <a
+                            href="https://www.tiktok.com/@thisridzz?_t=ZS-8wP8MOQjWJr&_r=1"
+                            class="text-xl hover:-translate-y-1 transition-transform"
+                            ><i class="fa-brands fa-tiktok"></i
+                        ></a>
+                    </div>
+                </div>
+
+                <div
+                    id="nav-toggle"
+                    class="text-2xl text-white md:hidden cursor-pointer"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+        <!-- end navbar -->
+        <canvas id="bg" class="fixed top-0 left-0 w-full h-full -z-20"></canvas>
+
+        <!-- home -->
+        <section
+            id="home"
+            class="max-w-6xl w-full mx-auto pt-32 px-4 sm:px-8 py-4"
+        >
+            <div class="relative overflow-hidden py-4 mb-4" data-aos="fade-up">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-dark-900 via-transparent to-dark-900 z-10 pointer-events-none"
+                ></div>
+                <div class="marquee-inner flex items-center gap-12">
+                    <div class="marquee-content flex items-center gap-12">
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            don't give up you've started with "hello world"
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Don't feel alone, because error is always with you
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            understand the algorithm, not memorize the code
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Build Something Everyday
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Don't be afraid to fail, because you have failed
+                            many times
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            error not found 404
+                        </span>
+                    </div>
+
+                    <div class="marquee-content flex items-center gap-12">
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            don't give up you've started with "hello world"
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Don't feel alone, because error is always with you
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            understand the algorithm, not memorize the code
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Build Something Everyday
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            Don't be afraid to fail, because you have failed
+                            many times
+                        </span>
+                        <span
+                            class="text-sm uppercase tracking-widest text-light-300/80 font-mono"
+                        >
+                            error not found 404
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col-reverse md:flex-row items-center gap-12 mb-4 md:mx-24"
+            >
+                <div
+                    class="text-center md:text-left"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                >
+                    <p
+                        class="text-sm text-primary-400 uppercase tracking-widest mb-3 font-mono"
+                    >
+                        Full-stack Developer
+                    </p>
+                    <h1
+                        class="text-4xl md:text-5xl font-bold text-light-100 mb-4 leading-tight"
+                    >
+                        Muhammad Farid Islamudin
+                    </h1>
+                    <p
+                        class="text-light-300/90 text-lg leading-relaxed mb-8 max-w-lg"
+                    >
+                        I create an elegant and modern website, using HTML Css
+                        Javascript programming language, I also use frameworks
+                        such as boottrap and tailwindcss. based in Indonesia
+                    </p>
+                    <div
+                        class="flex flex-wrap justify-center md:justify-start gap-10"
+                    >
+                        <a
+                            href="#about"
+                            class="w-12 h-12 flex items-center justify-center rounded-full border border-primary-500 hover:scale-105 transition"
+                        >
+                            <i
+                                class="fa-solid fa-id-badge text-gradient text-lg"
+                            ></i>
+                        </a>
+                        <a
+                            href="#service"
+                            class="w-12 h-12 flex items-center justify-center rounded-full border border-green-500 hover:scale-105 transition"
+                        >
+                            <i
+                                class="fa-solid fa-briefcase text-gradient text-lg"
+                            ></i>
+                        </a>
+                        <a
+                            href="#portfolio"
+                            class="w-12 h-12 flex items-center justify-center rounded-full border border-pink-500 hover:scale-105 transition"
+                        >
+                            <i
+                                class="fa-solid fa-laptop-code text-gradient text-lg"
+                            ></i>
+                        </a>
+                        <a
+                            href="#contact"
+                            class="w-12 h-12 flex items-center justify-center rounded-full border border-yellow-500 hover:scale-105 transition"
+                        >
+                            <i
+                                class="fa-solid fa-envelope text-gradient text-lg"
+                            ></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="relative mb-8 lg:mb-0 lg:col-span-5 flex justify-center"
+                    data-aos="zoom-in"
+                >
+                    <img
+                        src="asset/my.png"
+                        alt="Muhammad Farid Islamudin"
+                        class="w-full h-auto relative z-10 mask-fade"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- end home -->
+
+        <hr id="batas1" class="border-gray-500 my-16" />
+
+        <!-- about -->
+        <section
+            id="about"
+            class="min-h-screen flex flex-col items-center justify-center pt-4"
+        >
+            <div class="max-w-6xl w-full mx-auto px-4">
+                <h1
+                    class="text-4xl md:text-5xl font-bold mb-12 text-center"
+                    data-aos="fade-down"
+                >
+                    About <span class="text-gradient">Me</span>
+                </h1>
+
+                <div
+                    class="grid lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 items-center"
+                >
+                    <div
+                        class="relative mb-8 lg:mb-0 lg:col-span-5 flex justify-center"
+                        data-aos="zoom-in"
+                    >
+                        <div
+                            class="absolute -top-16 -left-16 w-[26rem] h-[26rem] bg-gradient-to-b from-blue-700 to-gray-900 rounded-full opacity-30 z-0"
+                        ></div>
+                        <img
+                            src="asset/my.png"
+                            alt="Muhammad Farid Islamudin"
+                            class="w-full h-auto relative z-10 mask-fade"
+                        />
+                    </div>
+
+                    <div
+                        class="place-self-center lg:col-span-7 text-center lg:text-left"
+                    >
+                        <h1
+                            class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            Hi, I'm Muhammad Farid Islamudin
+                        </h1>
+
+                        <div
+                            id="typed-output"
+                            class="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            I'm <span id="changing-text"></span>
+                        </div>
+
+                        <p
+                            class="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-300"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            Specializing in building responsive, accessible web
+                            applications with modern technologies. Focused on
+                            creating intuitive user experiences with clean code
+                            and thoughtful design principles.
+                        </p>
+
+                        <div
+                            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                        >
+                            <button
+                                onclick="navigateToAbout()"
+                                class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+                            >
+                                Read More
+                            </button>
+                        </div>
+
+                        <!-- Skills preview -->
+                        <div
+                            class="mt-8"
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                        >
+                            <h3
+                                class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3"
+                            >
+                                Technologies I Work With
+                            </h3>
+                            <div
+                                class="flex flex-wrap gap-2 justify-center lg:justify-start"
+                            >
+                                <span
+                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                                    >HTML</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full text-sm"
+                                    >CSS</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 rounded-full text-sm"
+                                    >JavaScript</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-full text-sm"
+                                    >Bootstrap</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-full text-sm"
+                                    >Tailwindcss</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end about -->
+
+        <hr id="batas2" class="border-gray-500 my-16" />
+
+        <!-- services -->
+        <section id="service" class="container mx-auto px-4 py-16 max-w-6xl">
+            <div class="text-center mb-16" id="services-header">
+                <h1
+                    class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeIn"
+                >
+                    My <span class="text-gradient">Services</span>
+                </h1>
+            </div>
+
+            <div
+                class="max-w-4xl mx-auto space-y-8 animate__animated animate__fadeIn animate__delay-1s"
+            >
+                <div
+                    data-aos="fade-up"
+                    class="service-section bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-glow-cyan hover:border-primary-400 hover:text-primary-400"
+                >
+                    <div
+                        class="flex flex-col md:flex-row md:items-center gap-6"
+                    >
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center text-primary-400 text-2xl"
+                            >
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-2xl font-bold mb-3">
+                                Front-end Developer
+                            </h2>
+                            <p class="text-gray-300 mb-4">
+                                High-performance custom website creation using
+                                programming languages like HTML, CSS,
+                                Javascript, bootstrap, and Tailwindcss. I focus
+                                on creating fast, accessible, and optimized web
+                                experiences.
+                            </p>
+                            <div class="flex flex-wrap gap-3 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary-400"
+                                    >HTML</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary-400"
+                                    >CSS</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary-400"
+                                    >Javascript</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary-400"
+                                    >Bootstrap</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary-400"
+                                    >Tailwindcss</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        onclick="openModal('Front-end Development')"
+                        class="learn-more-link text-primary-400 mt-6 inline-flex items-center"
+                    >
+                        Order this service
+                        <i class="fa-solid fa-angle-right h-4 w-4 ml-2"></i>
+                    </button>
+                </div>
+
+                <div
+                    data-aos="fade-down"
+                    class="service-section bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-glow-purple hover:border-secondary-400 hover:text-secondary-400"
+                >
+                    <div
+                        class="flex flex-col md:flex-row md:items-center gap-6"
+                    >
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center text-secondary-400 text-2xl"
+                            >
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-2xl font-bold mb-3">
+                                Back-end Developer
+                            </h2>
+                            <p class="text-gray-300 mb-4">
+                                Scalable, secure, and efficient server-side
+                                solutions to support modern applications. I
+                                design and build robust APIs, manage databases,
+                                and ensure optimal performance for each
+                                deployment.
+                            </p>
+                            <div class="flex flex-wrap gap-3 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-secondary-400"
+                                    >REST API</span
+                                >
+
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-secondary-400"
+                                    >MySQL</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-secondary-400"
+                                    >Authentication</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        onclick="openModal('Back-end Development')"
+                        class="learn-more-link text-secondary-400 mt-6 inline-flex items-center"
+                    >
+                        Order this service
+                        <i class="fa-solid fa-angle-right h-4 w-4 ml-2"></i>
+                    </button>
+                </div>
+
+                <div
+                    data-aos="fade-left"
+                    class="service-section bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-glow-emerald hover:border-accent-400 hover:text-accent-400"
+                >
+                    <div
+                        class="flex flex-col md:flex-row md:items-center gap-6"
+                    >
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center text-accent-400 text-2xl"
+                            >
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-2xl font-bold mb-3">
+                                UI/UX Designer
+                            </h2>
+                            <p class="text-gray-300 mb-4">
+                                I create user-friendly and visually appealing
+                                interfaces. From wireframes to high-fidelity
+                                prototypes, I make sure every interaction feels
+                                intuitive and enjoyable.
+                            </p>
+                            <div class="flex flex-wrap gap-3 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-accent-400"
+                                    >Figma</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-accent-400"
+                                    >Adobe XD</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-gray-700 rounded-full text-xs text-accent-400"
+                                    >Canva</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        onclick="openModal('UI/UX Design')"
+                        class="learn-more-link text-accent-400 mt-6 inline-flex items-center"
+                    >
+                        Order this service
+                        <i class="fa-solid fa-angle-right h-4 w-4 ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div
+                id="serviceModal"
+                class="fixed inset-0 z-50 hidden overflow-y-auto"
+            >
+                <div
+                    class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                >
+                    <div
+                        class="fixed inset-0 transition-opacity"
+                        aria-hidden="true"
+                    >
+                        <div
+                            class="absolute inset-0 bg-gray-900 opacity-75"
+                        ></div>
+                    </div>
+
+                    <div
+                        class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                    >
+                        <div class="px-6 py-4">
+                            <h3
+                                class="text-2xl font-bold text-white mb-2"
+                                id="modalTitle"
+                            >
+                                Order Service
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Fill out the form below to request this service
+                            </p>
+
+                            <form id="serviceForm">
+                                <input type="hidden" id="serviceType" />
+                                <div class="mb-4">
+                                    <label
+                                        for="name"
+                                        class="block text-gray-300 text-sm font-medium mb-2"
+                                        >Full Name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 text-white"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label
+                                        for="email"
+                                        class="block text-gray-300 text-sm font-medium mb-2"
+                                        >Email</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 text-white"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label
+                                        for="phone"
+                                        class="block text-gray-300 text-sm font-medium mb-2"
+                                        >Phone Number</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 text-white"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label
+                                        for="details"
+                                        class="block text-gray-300 text-sm font-medium mb-2"
+                                        >Project Details</label
+                                    >
+                                    <textarea
+                                        id="details"
+                                        name="details"
+                                        rows="4"
+                                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 text-white"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <div class="flex justify-end space-x-3 mt-6">
+                                    <button
+                                        type="button"
+                                        onclick="closeModal()"
+                                        class="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-500 transition"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        class="px-4 py-2 bg-primary-400 text-white rounded-md hover:bg-primary-500 transition"
+                                    >
+                                        Submit Request
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end services -->
+
+        <hr id="batas3" class="border-gray-500 my-16" />
+
+        <!-- portfolio -->
+        <section id="portfolio" class="py-16 mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 data-aos="fade-down" class="text-4xl font-bold mb-4">
+                        <span class="section-title"
+                            >My
+                            <span class="text-gradient">Portfolio</span></span
+                        >
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- darifa -->
+                    <div
+                        data-aos="zoom-in"
+                        data-aos-delay="100"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/darifaweb1.png"
+                            alt="Darifa Web"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Darifa Web
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                educational website that discusses the history
+                                of Indonesian kingdoms.
+                            </p>
+                            <a
+                                href="https://farid12443.github.io/Darifa-Web/Index.html"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- yogya web -->
+                    <div
+                        data-aos="flip-left"
+                        data-aos-delay="150"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/webyogya.png"
+                            alt="Yogya Web"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Yogya Web
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                Travel information platform and ticket purchase
+                                for tourist attractions in Yogyakarta.
+                            </p>
+                            <a
+                                href="https://www.hziq.my.id/"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ridzz -->
+                    <div
+                        data-aos="fade-right"
+                        data-aos-delay="200"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/ridzztravel1.png"
+                            alt="Ridzz Travel"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Ridzz Travel
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                website for booking tickets for the tourist
+                                attractions you want
+                            </p>
+                            <a
+                                href="https://farid12443.github.io/Tugas1.2/"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- riszzmedika -->
+                    <div
+                        data-aos="fade-left"
+                        data-aos-delay="250"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/ridzzmedika1.png"
+                            alt="Ridzz Medika"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Ridzz Medika
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                website that provides health services to the
+                                community.
+                            </p>
+                            <a
+                                href="https://farid12443.github.io/Tugas3.2/index.html"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ridzz store-->
+                    <div
+                        data-aos="flip-up"
+                        data-aos-delay="300"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/ridzzstore1.png"
+                            alt="Ridzz Store"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Ridzz Store
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                Cheap and complete game topup website for all
+                                games.
+                            </p>
+                            <a
+                                href="https://farid12443.github.io/Tugas2.2/"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- rypay -->
+                    <div
+                        data-aos="zoom-out"
+                        data-aos-delay="350"
+                        class="portfolio-card h-80"
+                    >
+                        <img
+                            src="asset/portfolio/rypay1.png"
+                            alt="RYPAY"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                RYPAY
+                            </h3>
+                            <p class="text-light-200 text-sm mb-6 text-center">
+                                Digital payment gateway with multi-platform
+                                support
+                            </p>
+                            <a
+                                href="https://farid12443.github.io/RYPAY/"
+                                class="portfolio-icon bg-white text-dark-900 p-3 rounded-full hover:bg-light-100 transition-colors duration-300 group"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-right transform -rotate-45 inline-block transition-transform duration-300 group-hover:rotate-0"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end portfolio -->
+
+        <hr id="batas4" class="border-gray-500 my-16" />
+
+        <!-- contact -->
+        <section id="contact" class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2
+                    class="text-4xl md:text-4xl font-bold text-center mb-16"
+                    data-aos="fade-down"
+                >
+                    Contact <span class="text-gradient">Me</span>
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div
+                        class="bg-gray-800 rounded-xl p-8 border border-gray-700 shadow-lg"
+                        data-aos="fade-right"
+                    >
+                        <h3
+                            class="text-2xl font-semibold mb-6 flex items-center"
+                        >
+                            <i
+                                class="fa-solid fa-paper-plane text-primary mr-3"
+                            ></i>
+                            Send Me a Message
+                        </h3>
+
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label
+                                        for="firstName"
+                                        class="block text-sm font-medium text-gray-300 mb-2"
+                                        >First Name</label
+                                    >
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            id="firstName"
+                                            name="firstName"
+                                            required
+                                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all"
+                                            placeholder="Farid"
+                                        />
+                                        <div
+                                            class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                                        >
+                                            <i
+                                                class="fa-solid fa-user text-gray-500"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="lastName"
+                                        class="block text-sm font-medium text-gray-300 mb-2"
+                                        >Last Name</label
+                                    >
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            id="lastName"
+                                            name="lastName"
+                                            required
+                                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all"
+                                            placeholder="Islamudin"
+                                        />
+                                        <div
+                                            class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                                        >
+                                            <i
+                                                class="fa-solid fa-user text-gray-500"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block text-sm font-medium text-gray-300 mb-2"
+                                    >Email Address</label
+                                >
+                                <div class="relative">
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all"
+                                        placeholder="fsrid124@gmail.com"
+                                    />
+                                    <div
+                                        class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                                    >
+                                        <i
+                                            class="fa-solid fa-envelope text-gray-500"
+                                        ></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="message"
+                                    class="block text-sm font-medium text-gray-300 mb-2"
+                                    >Your Message</label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all"
+                                    placeholder="Hello, I would like to talk about..."
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-gradient-to-r from-primary-400 to-secondary-400 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center"
+                            >
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <div
+                        class="bg-gray-800 rounded-xl p-8 border border-gray-700 shadow-lg"
+                        data-aos="fade-left"
+                    >
+                        <h3
+                            class="text-2xl font-semibold mb-6 flex items-center"
+                        >
+                            <i
+                                class="fa-solid fa-address-card text-primary-dark mr-3"
+                            ></i>
+                            Contact Information
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 p-3 text-primary">
+                                    <i
+                                        class="fa-solid fa-envelope text-2xl"
+                                    ></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-medium text-gray-300"
+                                    >
+                                        Email
+                                    </h4>
+                                    <a
+                                        href="mailto:farid@example.com"
+                                        class="text-gray-400 hover:text-primary transition-colors"
+                                    >
+                                        faridislamudin340@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 p-3 text-primary">
+                                    <i
+                                        class="fa-solid fa-phone-alt text-2xl"
+                                    ></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-medium text-gray-300"
+                                    >
+                                        Phone
+                                    </h4>
+                                    <a
+                                        href="tel:+1234567890"
+                                        class="text-gray-400 hover:text-primary transition-colors"
+                                    >
+                                        0821-3747-2779
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 p-3 text-primary">
+                                    <i
+                                        class="fa-solid fa-location-dot text-2xl"
+                                    ></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-medium text-gray-300"
+                                    >
+                                        Location
+                                    </h4>
+                                    <p class="text-gray-400">
+                                        Suruh, Kab.Semsrang
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="pt-36">
+                                <h4
+                                    class="text-lg font-medium text-gray-300 mb-4"
+                                >
+                                    Follow Me
+                                </h4>
+                                <div class="flex space-x-4">
+                                    <a
+                                        href="https://github.com/Farid12443"
+                                        class="bg-gray-700 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a
+                                        href="https://www.tiktok.com/@thisridzz?_t=ZS-8wP8MOQjWJr&_r=1"
+                                        class="bg-gray-700 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                                    >
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </a>
+
+                                    <a
+                                        href="https://www.instagram.com/thisridzzz?igsh=ZG56djN2YWFidDNx"
+                                        class="bg-gray-700 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                                    >
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="successModal"
+                class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center hidden"
+            >
+                <div
+                    class="bg-gray-800 rounded-xl p-8 max-w-md w-full mx-4 border border-gray-700 relative"
+                >
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <i
+                                class="fa-solid fa-check text-white text-2xl"
+                            ></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">
+                            Message Sent!
+                        </h3>
+                        <p class="text-gray-300 mb-6">
+                            Thank you for reaching out. I'll get back to you as
+                            soon as possible.
+                        </p>
+                        <button
+                            onclick="document.getElementById('successModal').classList.add('hidden')"
+                            class="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end contact -->
+
+        <!-- about Page -->
+        <section
+            id="full-about-page"
+            class="hidden min-h-screen mt-10 py-16 px-4 max-w-4xl mx-auto"
+        >
+            <button
+                onclick="backToMain()"
+                class="mb-8 flex items-center text-blue-600 dark:text-blue-400 hover:underline"
+            >
+                <i class="fa-solid fa-arrow-left pr-4"></i>
+                Back to Home
+            </button>
+
+            <div id="main-about-content">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="md:col-span-2">
+                        <h2
+                            class="text-2xl font-semibold mb-4 dark:text-white"
+                            data-aos="fade-down"
+                        >
+                            About me
+                        </h2>
+                        <p
+                            data-aos="fade-right"
+                            class="text-gray-600 dark:text-gray-300 mb-4"
+                        >
+                            My name is Muhammad Farid Islamudin. I was born in
+                            Kabupaten Semarang on September 6, 2008, and I live
+                            in Kepundung, RT 06 RW 08, Reksosari, Suruh
+                            District. I have a strong interest in technology and
+                            truly enjoy coding. My life motto is “Keep going
+                            even when you're extremely tired,” which motivates
+                            me to stay persistent through challenges.
+                        </p>
+                        <p
+                            data-aos="fade-left"
+                            class="text-gray-600 dark:text-gray-300"
+                        >
+                            I’m inspired by the character Ultraman Dyna for his
+                            courage and determination. My dream is to become a
+                            skilled programmer and to grow into a better person
+                            every day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2
+                        data-aos="fade-up"
+                        class="text-2xl font-semibold mb-6 dark:text-white"
+                    >
+                        Education
+                    </h2>
+
+                    <div
+                        data-aos="fade-down"
+                        class="border-l-4 border-blue-500 pl-4 py-2 mb-4"
+                    >
+                        <h3 class="font-bold text-lg dark:text-white">
+                            Ar Rahmah Islamic Kindergarten, Suruh
+                        </h3>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            Attended: 2010 – 2012
+                        </p>
+                    </div>
+
+                    <div
+                        data-aos="fade-down
+                    "
+                        class="border-l-4 border-blue-500 pl-4 py-2 mb-4"
+                    >
+                        <h3 class="font-bold text-lg dark:text-white">
+                            Ar Rahmah Islamic Elementary School, Suruh
+                        </h3>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            Attended: 2012 – 2020
+                        </p>
+                    </div>
+
+                    <div
+                        data-aos="fade-left"
+                        class="border-l-4 border-blue-500 pl-4 py-2 mb-4"
+                    >
+                        <h3 class="font-bold text-lg dark:text-white">
+                            Ar Rahmah Islamic Junior High School, Suruh
+                        </h3>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            Attended: 2020 – 2024
+                        </p>
+                    </div>
+
+                    <div
+                        data-aos="fade-right"
+                        class="border-l-4 border-blue-500 pl-4 py-2"
+                    >
+                        <h3 class="font-bold text-lg dark:text-white">
+                            Tengaran State Vocational School
+                        </h3>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            Attending: 2024 – Present
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2
+                        data-aos="fade-down"
+                        class="text-2xl font-semibold mb-6 dark:text-white"
+                    >
+                        Experience
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-4 py-2">
+                            <h3
+                                data-aos="fade-up"
+                                class="font-bold text-lg dark:text-white"
+                            >
+                                Programming Competition Participant
+                            </h3>
+                            <p
+                                data-aos="fade-right"
+                                class="text-gray-500 dark:text-gray-400"
+                            >
+                                Pemrograman byProject kategori Siswa of
+                                Universitas Teknologi Yogyakarta • 2025
+                            </p>
+                            <p
+                                data-aos="fade-left"
+                                class="text-gray-600 dark:text-gray-300 mt-2"
+                            >
+                                Participate in a coding competition themed
+                                "Creative Exploration in the Digital Era" using
+                                HTML, CSS, and Javascript programming languages.
+                                Gain valuable experience in real-world coding
+                                and teamwork.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- skil -->
+            <div class="py-12 overflow-x-hidden md:py-20">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12"
+                        data-aos="fade-down"
+                    >
+                        My <span class="text-gradient">Skills</span>
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-6 md:gap-8 w-full">
+                        <!-- Technical Skills -->
+                        <div
+                            class="bg-gray-800 rounded-xl p-8 border border-gray-700"
+                            data-aos="fade-right"
+                        >
+                            <h3
+                                class="text-xl md:text-2xl font-semibold mb-6 border-b border-gray-700 pb-3 flex items-center"
+                            >
+                                <i class="fas fa-code text-primary mr-3"></i>
+                                Technical Skills
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="group" data-aos="fade-up">
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-brands fa-html5 text-2xl md:text-3xl text-[#e44d26]"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            HTML5
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >95%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="95%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="50"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-brands fa-css3-alt text-2xl md:text-3xl text-[#264de4]"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            CSS3
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >90%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="90%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-brands fa-js text-2xl md:text-3xl text-[#f7df1e]"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            JavaScript
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >80%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="80%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="150"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-brands fa-bootstrap text-2xl md:text-3xl text-[#563d7c]"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Bootstrap
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >95%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="95%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <svg
+                                                class="w-8 md:w-10"
+                                                viewBox="0 0 50 50"
+                                                fill="#38bdf8"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M24.855 12.378c-4.792 0-8.036 2.357-9.731 7.07 1.946-2.357 4.071-3.248 6.375-2.678 1.377.343 2.36 1.336 3.412 2.404 1.753 1.779 3.733 3.784 8.075 3.784 4.791 0 8.035-2.358 9.731-7.071-1.946 2.358-4.07 3.249-6.374 2.679-1.377-.343-2.36-1.337-3.413-2.404-1.752-1.78-3.732-3.784-8.075-3.784zM15.124 26.37c-4.791 0-8.035 2.358-9.731 7.07 1.946-2.357 4.07-3.248 6.375-2.678 1.376.343 2.36 1.336 3.412 2.404 1.752 1.78 3.732 3.785 8.075 3.785 4.792 0 8.036-2.358 9.731-7.071-1.946 2.358-4.07 3.249-6.374 2.679-1.377-.343-2.36-1.337-3.413-2.404-1.752-1.78-3.732-3.785-8.075-3.785z"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Tailwindcss
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >87%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="87%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="250"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary group-hover:text-white transition-colors"
+                                        >
+                                            <img
+                                                src="asset/kotlin.png"
+                                                alt="Kotlin Logo"
+                                                class="w-8 md:w-10"
+                                            />
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Kotlin
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >50%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="50%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Skills -->
+                        <div
+                            class="bg-gray-800 rounded-xl p-8 border border-gray-700"
+                            data-aos="fade-left"
+                        >
+                            <h3
+                                class="text-xl md:text-2xl font-semibold mb-6 border-b border-gray-700 pb-3 flex items-center"
+                            >
+                                <i
+                                    class="fa-solid fa-user-tie text-primary-dark mr-3"
+                                ></i>
+                                Professional Skills
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Communication -->
+                                <div class="group" data-aos="fade-up">
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-comments text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Communication
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >90%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="90%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="50"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-users text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Teamwork
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >88%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="88%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-lightbulb text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Problem Solving
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >92%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="92%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="150"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Time Management
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >85%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="85%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-flag text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Leadership
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >80%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="80%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="250"
+                                >
+                                    <div class="flex flex-col items-center p-4">
+                                        <div
+                                            class="w-14 h-14 md:w-16 md:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-3 text-primary-dark group-hover:text-white transition-colors"
+                                        >
+                                            <i
+                                                class="fa-solid fa-palette text-2xl md:text-3xl"
+                                            ></i>
+                                        </div>
+                                        <h4
+                                            class="font-medium text-base md:text-lg text-center mb-2"
+                                        >
+                                            Creativity
+                                        </h4>
+                                        <div class="w-full relative">
+                                            <span
+                                                class="absolute right-0 top-[-20px] text-sm text-gray-500 group-hover:text-primary-dark transition-colors progress-percent"
+                                                >87%</span
+                                            >
+                                            <div class="progress-container">
+                                                <div
+                                                    class="h-1.5 rounded-full bg-primary-dark"
+                                                    data-width="87%"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="certificates" class="py-20">
+                <div class="container mx-auto px-5 max-w-6xl">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold font-bold mb-12 text-center"
+                    >
+                        My <span class="text-gradient">Certificates</span>
+                    </h2>
+
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div
+                            class="w-full max-w-md bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+                            data-aos="fade-up"
+                        >
+                            <div class="relative overflow-hidden">
+                                <img
+                                    src="asset/certificate.png"
+                                    class="w-full h-48 object-cover"
+                                    alt="Top 10 Programming Certificate"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"
+                                ></div>
+                                <div class="absolute bottom-4 left-4">
+                                    <span
+                                        class="bg-gradient-to-r from-primary-400 to-secondary-400 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >
+                                        Web Development
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    Top 10 Programming by Project (Student
+                                    Category)
+                                </h3>
+                                <p class="text-gray-400 mb-4">
+                                    Issued by: Universitas Teknologi Yogyakarta
+                                </p>
+                                <p class="text-gray-300 mb-4">
+                                    This certificate is awarded in recognition
+                                    of outstanding achievement in the
+                                    programming competition by project, student
+                                    category.
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">
+                                        Issued: March 20, 2025
+                                    </span>
+                                    <button
+                                        class="text-blue-400"
+                                        onclick="showCertificateModal('asset/certificate.png')"
+                                    >
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="certificateModal"
+                class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 hidden"
+            >
+                <div class="relative max-w-5xl w-full">
+                    <button
+                        onclick="document.getElementById('certificateModal').classList.add('hidden')"
+                        class="absolute -top-12 right-0 text-white hover:text-primary transition-colors text-2xl"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <img
+                        id="modalCertificateImage"
+                        src=""
+                        alt="Certificate"
+                        class="w-full max-h-[90vh] object-contain"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- end bout Page -->
+
+        <!-- footer -->
+        <footer class="bg-gray-800 border-t border-gray-700 pt-12 pb-6">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <!-- About Column -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="text-gradient"
+                                >Muhammad Farid Islamudin</span
+                            >
+                        </h3>
+                        <p class="text-gray-400 mb-4">
+                            I build clean, modern websites and user interfaces
+                            with focus on performance, accessibility, and great
+                            UX.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a
+                                href="https://github.com/Farid12443"
+                                class="bg-gray-700 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <a
+                                href="https://www.tiktok.com/@thisridzz?_t=ZS-8wP8MOQjWJr&_r=1
+                                "
+                                class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                            >
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/thisridzzz?igsh=ZG56djN2YWFidDNx"
+                                class="bg-gray-700 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors"
+                            >
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">
+                            Quick Links
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="text-gray-400 hover:text-primary transition-colors"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="text-gray-400 hover:text-primary transition-colors"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#service"
+                                    class="text-gray-400 hover:text-primary transition-colors"
+                                    >Service</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#portfolio"
+                                    class="text-gray-400 hover:text-primary transition-colors"
+                                    >Portofolio</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#contact"
+                                    class="text-gray-400 hover:text-primary transition-colors"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">
+                            Contact Info
+                        </h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-location-dot text-primary mr-3 mt-1"
+                                ></i>
+                                <span>Suruh,Kab.Semarang</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-envelope text-primary mr-3 mt-1"
+                                ></i>
+                                <a
+                                    href="mailto:farid@example.com"
+                                    class="hover:text-primary transition-colors"
+                                    >faridislamudin340@gmail.com</a
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fa-solid fa-phone-alt text-primary mr-3 mt-1"
+                                ></i>
+                                <a
+                                    href="tel:+1234567890"
+                                    class="hover:text-primary transition-colors"
+                                    >0821 3747 2779</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-6 items-center">
+                    <p class="text-center text-gray-500 text-sm mb-4 md:mb-0">
+                        &copy; <span id="currentYear"></span> Muhammad Farid
+                        Islamudin. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/animation.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/three.js
+        "></script>
+    </body>
+</html>
