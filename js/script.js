@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         once: false,
         mirror: true,
         startEvent: "DOMContentLoaded",
-        offset: 200,
+        offset: 120,
         delay: 100
     });
 
